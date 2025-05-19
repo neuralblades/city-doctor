@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal: #3CB4A0;
+  --blue: #0077B5;
+  --dark-blue: #004165;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-city-dark-gray;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-city-blue hover:bg-city-dark-blue text-white font-semibold py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-city-teal hover:bg-opacity-90 text-white font-semibold py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-city-blue text-city-blue hover:bg-city-blue hover:text-white font-semibold py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-city-dark-blue mb-6;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
